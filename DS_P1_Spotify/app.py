@@ -12,6 +12,7 @@ import numpy as np
 import joblib
 import shap
 import matplotlib
+import os
 matplotlib.use("Agg")  # Necesario para Streamlit
 import matplotlib.pyplot as plt
 
@@ -24,7 +25,12 @@ st.title("🎵 Spotify Popularity Predictor")
 # ==============================
 # LOAD MODEL
 # ==============================
-model = joblib.load("models/random_forest.pkl")
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, "models", "random_forest.pkl")
+
+model = joblib.load(model_path)
 
 # ==============================
 # SIDEBAR INPUTS
