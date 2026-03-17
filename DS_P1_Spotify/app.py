@@ -21,6 +21,7 @@ import matplotlib.pyplot as plt
 # ==============================
 st.set_page_config(page_title="Spotify Popularity Predictor")
 st.title("🎵 Spotify Popularity Predictor")
+st.subheader("Set the audio features of your track and see its predicted popularity along with an explanation of the model's decision!")
 
 # ==============================
 # LOAD MODEL
